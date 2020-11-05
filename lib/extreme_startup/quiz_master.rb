@@ -6,14 +6,14 @@ module ExtremeStartup
 
   class RateController
     
-    MIN_REQUEST_INTERVAL_SECS = BigDecimal.new("1")
-    MAX_REQUEST_INTERVAL_SECS = BigDecimal.new("20")
-    REQUEST_DELTA_SECS = BigDecimal.new("0.1")
+    MIN_REQUEST_INTERVAL_SECS = BigDecimal("1")
+    MAX_REQUEST_INTERVAL_SECS = BigDecimal("20")
+    REQUEST_DELTA_SECS = BigDecimal("0.1")
     
     SLASHDOT_THRESHOLD_SCORE = 2000
     
     def initialize
-      @delay = BigDecimal.new("5")
+      @delay = BigDecimal("5")
     end
     
     def wait_for_next_request(question)
@@ -32,9 +32,9 @@ module ExtremeStartup
       else
         #error response
         if (@delay < 10)
-          @delay = BigDecimal.new("10")
+          @delay = BigDecimal("10")
         end
-        return BigDecimal.new("20")
+        return BigDecimal("20")
       end
       @prev_question = question
       @delay.to_f
@@ -55,12 +55,12 @@ module ExtremeStartup
   class SlashdotRateController < RateController
     
     def initialize
-      @delay = BigDecimal.new("0.02")
+      @delay = BigDecimal("0.02")
     end
         
     def delay_before_next_request(question)
       result = @delay.to_f
-      @delay = @delay * BigDecimal.new("1.022")
+      @delay = @delay * BigDecimal("1.022")
       result
     end
     
