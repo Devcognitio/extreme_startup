@@ -1,3 +1,21 @@
+Usos
+=======
+* Para inscribirse los usuarios pueden ir a `/`
+* Para administrar el juego puedes ir a `/controlpanel`, si das clic en alguno de los links, deberas volver a la pagina anterior, tiene temas por mejorar.
+* Para ver el score de todos los jugadores `/scores`
+* para ver el grafo de todo el juego `/graph`
+
+---
+Para construir y ejecutar puedes realizar los siguientes comandos:
+ ````
+ cd ../<extreme startup dir>
+ sh build.sh
+ sh run.sh
+ ````
+Una vez los comandos sean lanzados por lo menos una vez, se creará una imagen docker llamada `/mymain`, con esta imagen podras parar y ejecutar nuevamente el contenedor con el proyecto.
+Tener en cuenta que se expone el proyecto por el puerto `3000`
+
+
 Welcome
 =======
 This is Extreme Startup. This software supports a workshop where teams can compete to build a software product that satisfies market demand.
