@@ -131,6 +131,18 @@ module ExtremeStartup
     get '/players' do
       haml :add_player
     end
+
+    get '/advance_round' do
+      question_factory.advance_round.to_s
+    end
+
+    get '/pause' do
+      game_state.pause
+    end
+
+    get '/resume' do
+      game_state.resume
+    end
     
     post '/advance_round' do
       question_factory.advance_round.to_s

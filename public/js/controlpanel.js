@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	$('#advance').click(function(){
+	    $.get('/advance_round');
 		$.post('/advance_round', function(data) {
 		  location.reload();
 		});

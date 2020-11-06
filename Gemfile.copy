@@ -1,0 +1,18 @@
+source 'https://rubygems.org'
+
+
+gem 'eventmachine', '~> 1.2', '>= 1.2.7'
+gem 'thin', '~> 1.7', '>= 1.7.2'
+gem 'sinatra', '~> 2.1'
+gem 'httparty', '~> 0.18.1'
+gem 'uuid', '~> 2.3', '>= 2.3.9'
+gem 'haml', '~> 5.2'
+gem 'rspec', '~> 3.10'
+gem 'cucumber', '~> 5.2'
+gem 'rack-test', '~> 1.1'
+gem 'capybara', '~> 3.33'
+gem 'json', '~> 2.3', '>= 2.3.1'
+gem 'bigdecimal', '~> 2.0'
+
+gem 'mime-types', '~> 3.3', '>= 3.3.1'
+gem 'json_pure', '~> 2.3', '>= 2.3.1'
